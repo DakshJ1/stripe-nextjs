@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { checkout } from '../checkout'
 
 export default function Home() {
   return (
@@ -27,14 +26,7 @@ export default function Home() {
           </a>
         </div>
         <button onClick={(() => {
-          checkout({
-            lineItems: [
-              {
-                price: "price_1LL2N4SDmrGD4ry0289gl7um",
-                quantity: 1
-              }
-            ]
-          });
+          checkout();
         })}>Buy!</button>
       </main>
     </div>
